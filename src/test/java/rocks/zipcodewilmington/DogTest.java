@@ -59,8 +59,14 @@ public class DogTest {
     // TODO - Create tests for `void eat(Food food)`
     @Test
     public void testEat() {
-//        Dog dog = new Dog("DogA",new Date(), 2);
-//        dog.eat("meal");
+        Dog dog = new Dog("DogA",new Date(), 2);
+        Food food = new Food();
+        dog.eat(food);
+        dog.eat(food);
+        Integer actual = dog.getNumberOfMealsEaten();
+        Integer expected = 2;
+        Assert.assertEquals(actual,expected);
+
 
     }
 

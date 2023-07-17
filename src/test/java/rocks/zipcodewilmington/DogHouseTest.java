@@ -25,7 +25,7 @@ public class DogHouseTest {
 
     @Test
     public void testAdd() {
-        Dog dog = new Dog("dog1",new Date(),1);
+        Dog dog = new Dog("dog1",new Date(),7);
         DogHouse.add(dog);
         DogHouse.add(dog);DogHouse.add(dog);
         Integer actual = DogHouse.getNumberOfDogs();
@@ -78,6 +78,9 @@ public class DogHouseTest {
         Integer expected = DogHouse.getNumberOfDogs();
         Integer actual = 2;
         Assert.assertEquals(actual,expected);
+        DogHouse.clear();
+
+
     }
 
 
@@ -88,8 +91,8 @@ public class DogHouseTest {
     public void testGetNumberOfDogs1() {
         Dog dog = new Dog("dog1",new Date(),2);
         DogHouse.add(dog);DogHouse.add(dog);DogHouse.add(dog);DogHouse.add(dog);
-        Integer expected = DogHouse.getNumberOfDogs();
-        Integer actual = 4;
+        Integer actual = DogHouse.getNumberOfDogs();
+        Integer expected = 4;
         Assert.assertEquals(actual, expected);
         DogHouse.clear();
 
